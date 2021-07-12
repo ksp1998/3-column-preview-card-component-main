@@ -40,7 +40,7 @@ body {
 
 .container {
     width: 60rem;
-    margin: 10rem 0;
+    margin: 10rem 0 8rem 0;
     display: flex;
     border-radius: .5rem;
     overflow: hidden;
@@ -78,11 +78,6 @@ body {
     animation: run 2s;
     transform: translateX(75%);
 }
-
-/* @keyframes run {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(75%); }
-} */
 
 .card .heading {
     font-family: var(--bsd-family);
