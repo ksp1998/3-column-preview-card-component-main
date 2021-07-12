@@ -35,12 +35,11 @@ body {
     background-color: var(--very-light-gray);
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 } 
 
 .container {
     width: 60rem;
-    margin: 12rem 0 8rem 0;
     display: flex;
     border-radius: .5rem;
     overflow: hidden;
