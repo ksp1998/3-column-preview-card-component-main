@@ -35,12 +35,12 @@ body {
     background-color: var(--very-light-gray);
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 } 
 
 .container {
     width: 60rem;
-    margin: 5rem 0;
+    margin: 10rem 0;
     display: flex;
     border-radius: .5rem;
     overflow: hidden;
@@ -71,11 +71,22 @@ body {
     width: 100%;
     padding-bottom: 1rem;
     background-repeat: no-repeat;
+    transition: all 1s ease-in-out;
 }
+
+.card:hover > .icons {
+    animation: run 2s;
+    transform: translateX(75%);
+}
+
+/* @keyframes run {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(75%); }
+} */
 
 .card .heading {
     font-family: var(--bsd-family);
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--very-light-gray);
     padding: 1rem 0;
@@ -103,6 +114,7 @@ body {
     outline: none;
     border-radius: 5rem;
     cursor: pointer;
+    transition: all 250ms ease-in-out;
 }
 
 .card .btn:hover {
@@ -135,6 +147,7 @@ body {
 
 @media (max-width: 768px) {
     .container {
+        margin: 5rem 0;
         width: 24rem;
         flex-direction: column;
     }
