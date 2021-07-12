@@ -1,0 +1,156 @@
+
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* variables */
+:root {
+    /* Primary Colors*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral Colors*/
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* for paragraphs */
+    --very-light-gray: hsl(0, 0%, 95%); /* for background, headings and buttons */
+
+    /* Font Size */
+    --font-size: 15px;
+
+    /* Fonts */
+    --ld-family: 'Lexend Deca', sans-serif;
+    --bsd-family: 'Big Shoulders Display', cursive;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.container {
+    width: 60rem;
+    margin: 5rem 0;
+    display: flex;
+    border-radius: .5rem;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+
+.bright-orange {
+    color: var(--bright-orange);
+    background-color: var(--bright-orange);
+}
+
+.dark-cyan {
+    color: var(--dark-cyan);
+    background-color: var(--dark-cyan);
+}
+
+.very-dark-cyan {
+    color: var(--very-dark-cyan);
+    background-color: var(--very-dark-cyan);
+}
+
+.card {
+    width: 100%;
+    padding: 3rem;
+}
+
+.card .icons {
+    width: 100%;
+    padding-bottom: 1rem;
+    background-repeat: no-repeat;
+}
+
+.card .heading {
+    font-family: var(--bsd-family);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--very-light-gray);
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.card .paragraph {
+    min-height: 13rem;
+    font-family: var(--ld-family);
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--transparent-white);
+    padding: 1rem 0 2rem 0;
+}
+
+.card .btn {
+    font-family: var(--ld-family);
+    font-size: .9rem;
+    font-weight: 500;
+    color: inherit;
+    padding: .8rem 2rem;
+    background-color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    outline: none;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    color: var(--very-light-gray);
+    background-color: transparent;
+}
+
+.footer {
+    position: absolute;
+    bottom: 1rem;
+    font-size: .9rem;
+    color: var(--very-dark-cyan);
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--bright-orange);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: var(--dark-cyan);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 45rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 24rem;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 440px) {
+    .container {
+        width: 90%;
+    }
+
+    .card .paragraph {
+        min-height: auto;
+        font-size: 1.025rem;
+    }
+
+    .footer {
+        font-size: .75rem;
+    }
+}
